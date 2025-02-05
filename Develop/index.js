@@ -14,13 +14,21 @@ const questions =
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) 
+{
+    fs.writeFile(fileName, JSON.stringify(data, null, 2), (err) =>{
+        if (err) throw err
+    });
+};
 
 // TODO: Create a function to initialize app
 function init() 
 {
-    return inquirer.prompt(questions);
-}
+    return inquirer.prompt(questions)
+        .then(responses => {
+            writeToFile('README.txt', responses)    
+        })
+};
 
 // Function call to initialize app
 init();
