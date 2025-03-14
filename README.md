@@ -1,7 +1,7 @@
 # Project Title
 
 ## Description
-undefined
+A readme Generator made with node.js
 
 ## Table of Contents
 - [Installation](#installation)
