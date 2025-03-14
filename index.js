@@ -44,8 +44,8 @@ function init()
 {
     return inquirer.prompt(questions)
         .then(responses => {
-            const genMarkdown = generateMarkdown(responses)
-            writeToFile('README.md', genMarkdown)
+            const genMarkdown = generateMarkdown(questions)
+            writeToFile('README.md', responses)
         })
 };
 
