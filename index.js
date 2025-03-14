@@ -27,7 +27,7 @@ const questions = [
     {
         name: 'installation',
         type: 'input',
-        message: 'Please provide installation instructions: ',
+        message: colors.bgBrightGreen('Please provide installation instructions: '),
         default: 'npm install',
         validate(installation) {
             return installation.trim().length > 0 ? true : 'Please provide valid installation instructions!';
@@ -36,7 +36,7 @@ const questions = [
     {
         name: 'usage',
         type: 'input',
-        message: 'Please provide usage information: ',
+        message: colors.bgYellow('Please provide usage information: '),
         default: 'npm start',
         validate(usage) {
             return usage.trim().length > 0 ? true : 'Please provide valid usage information!';
@@ -45,14 +45,14 @@ const questions = [
     {
         name: 'license',
         type: 'list',
-        message: 'Please choose a license for your project: ',
+        message: colors.bgBrightGreen('Please choose a license for your project: '),
         choices: ['MIT', 'GPLv3', 'Apache 2.0', 'BSD 3-Clause', 'None'],
         default: 'MIT'
     },
     {
         name: 'contributing',
         type: 'input',
-        message: 'Please provide contribution guidelines: ',
+        message: colors.bgYellow('Please provide contribution guidelines: '),
         default: 'Contributions are welcome!',
         validate(contributing) {
             return contributing.trim().length > 0 ? true : 'Please provide valid contribution guidelines!';
@@ -61,7 +61,7 @@ const questions = [
     {
         name: 'tests',
         type: 'input',
-        message: 'Please provide test instructions: ',
+        message: colors.bgBrightGreen('Please provide test instructions: '),
         default: 'npm test',
         validate(tests) {
             return tests.trim().length > 0 ? true : 'Please provide valid test instructions!';
@@ -70,7 +70,7 @@ const questions = [
     {
         name: 'github',
         type: 'input',
-        message: 'Please enter your GitHub username: ',
+        message: colors.bgYellow('Please enter your GitHub username: '),
         validate(github) {
             return github.trim().length > 0 ? true : 'Please provide a valid GitHub username!';
         }
@@ -78,7 +78,7 @@ const questions = [
     {
         name: 'email',
         type: 'input',
-        message: 'Please enter your email address: ',
+        message: colors.bgBrightGreen('Please enter your email address: '),
         validate(email) {
             return email.trim().length > 0 ? true : 'Please provide a valid email address!';
         }
